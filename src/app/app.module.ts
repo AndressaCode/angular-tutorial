@@ -9,25 +9,15 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
 import localePt from '@angular/common/locales/pt';
 
-
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NovaTransferenciaComponent,
-    ExtratoComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, NovaTransferenciaComponent, ExtratoComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
-    {provide: LOCALE_ID, useValue: 'pt' },
-    {provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
-
-],
-  bootstrap: [AppComponent]
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
